@@ -11,6 +11,10 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Qui prend quoi ?' });
   });
 
+app.get('/party/:id', function(req, res) {
+  res.render('party', { title: 'Page évenement' });
+  });  
+
 app.post('/party', function(req, res) {
   axios
   .post(`${process.env.API_URL}/party`, req.body)
