@@ -26,9 +26,8 @@ app.get('/party/:id', function(req, res) {
 app.post('/party', function(req, res) {
   axios
   .post(`${process.env.API_URL}/party`, req.body)
-  .then(({data}) => console.log(data))
-  .catch((err) => console.error(err));
-  res.send('Post ok !');
+  .then(({ data }) => res.redirect(`/party/${data._id}`))
+  .catch((err) => res.send(err));
   });
 
 app.listen(port, () => console.log(`Front app listening on port ${port}!`));
