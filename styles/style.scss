@@ -1,4 +1,6 @@
 @import 'vendors/reset.scss';
+@import 'config/media.scss';
+@import 'blocs/newParty.scss';
 
 body{
     margin: 0px 50px;
@@ -21,14 +23,5 @@ form {
     div {
       display: flex;
       flex-direction: column;
-
-      label{
-          font-size: 20px;
-          line-height: 35px;
-      }
-      input{
-          line-height: 35px;
-          margin-bottom: 10px;
-      }
     }
   }
