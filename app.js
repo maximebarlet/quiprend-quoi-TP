@@ -31,6 +31,13 @@ app.post('/party', function(req, res) {
   .catch((err) => res.send(err));
   });
 
+app.post('/party/:id/item', function(req, res) {
+  axios
+  .post(`${process.env.API_URL}/party`, req.body)
+  .then(({ data }) => res.redirect(`/party/${data._id}`))
+  .catch((err) => res.send(err));
+  });
+  
 app.listen(port, () => console.log(`Front app listening on port ${port}!`));
 
 app.set('view engine', 'pug');
