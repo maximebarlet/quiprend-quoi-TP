@@ -1,9 +1,34 @@
 @import 'vendors/reset.scss';
 
+body{
+    margin: 0px 50px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 55px;
+}
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+}
+
 form {
-    border: 1px solid blue;
-  
+    width: 50%;
+    
     div {
-      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+
+      label{
+          font-size: 20px;
+          line-height: 35px;
+      }
+      input{
+          line-height: 35px;
+          margin-bottom: 10px;
+      }
     }
   }
